@@ -1,0 +1,79 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Cancel Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>College Event Management System</h1>
+    <h2>Cancel Registration</h2>
+
+    <input type="text" id="studentName" placeholder="Student Name">
+
+    <input type="text" id="eventName" placeholder="Event Name">
+
+    <br><br>
+
+    <button onclick="cancelRegistration()">
+        Cancel Registration
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+function cancelRegistration() {
+
+    let student = document.getElementById("studentName").value;
+    let event = document.getElementById("eventName").value;
+
+    if (student == "" || event == "") {
+        document.getElementById("message").innerHTML =
+            "Please enter all details.";
+        return;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Registration cancelled successfully!";
+
+}
+
+</script>
+
+</body>
+</html>
